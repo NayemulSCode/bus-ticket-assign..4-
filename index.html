@@ -51,16 +51,16 @@
                 </div>
             </div>
             <div class="input-group ">
-                    <div class="row f-class">
-                        <div class="col-md-7">
-                            <label for="">First Class ($150)</label>
-                            <input id="firstClass-count" class="inp-style inp-width" type="text"value="0">
-                        </div>
-                        <div class="col-md-4">
-                            <button onclick="handleTicket('firstClass', false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
-                            <button onclick="handleTicket('firstClass', true)" class="btn btn-default"><i class="fas fa-plus"></i></button>
-                        </div>
+                 <div class="row f-class">
+                    <div class="col-md-7">
+                         <label for="">First Class ($150)</label>
+                         <input id="firstClass-count" class="inp-style inp-width" type="text"value="0">
                     </div>
+                    <div class="col-md-4">
+                        <button onclick="handleTicket('firstClass', false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                        <button onclick="handleTicket('firstClass', true)" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
             </div>
             
             <div class="input-group ">
@@ -74,7 +74,7 @@
                         <button onclick="handleTicket('economyClass', true)" class="btn btn-default"><i class="fas fa-plus"></i></button>
                     </div>
                 </div>
-        </div>
+            </div>
             <div class="calculations">
                 <div class="amount">
                     <div class="left">
@@ -103,14 +103,17 @@
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button id="booking" class="btn-style">Book Now</button>
+            <div id="booking-message" class="booking-confirmation">
+                <h5>Booking Successfully Completed</h5>
+            </div>
         </div>
 
         <div class="booking-content">
             <h1>discover <br> around the world</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
         </div>
-    </section>
+    </main>
 
     <!--Thank You-->
     <script src="script.js"></script>

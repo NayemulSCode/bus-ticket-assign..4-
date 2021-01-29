@@ -1,13 +1,4 @@
-// document.getElementById('ticket-increase').addEventListener('click',function(){
-//     const fcticketInput = document.getElementById('firstClassTicket-count');
-//     const ticketCount = parseInt(fcticketInput.value);
-//     const ticketNew  = ticketCount + 1;
-    
-//     fcticketInput.value = ticketNew;
-//     const tcTicketTotal = ticketNew * 150;
-//     console.log(tcTicketTotal);
-// })
-
+//clik handler function
 function handleTicket(ticketType, isIncrement){
     const ticketInput = document.getElementById(ticketType+'-count');
     const ticketCount = getTicket(ticketType);
@@ -22,10 +13,13 @@ function handleTicket(ticketType, isIncrement){
     ticketInput.value = ticketIsCount;
 
     //amount calculation
-    let ticketTotal = 0;
-    if(ticketType == 'firstClass'){
-        ticketTotal = ticketIsCount * 150;
-    }
+    // let ticketAmount = 0;
+    // if(ticketType == 'firstClass'){
+    //     ticketAmount = ticketIsCount * 150;
+    // }
+    // if(ticketType == 'economyClass'){
+    //     ticketAmount = ticketIsCount * 100;
+    // }
     calculateTotal();
 }
 
@@ -35,16 +29,24 @@ function calculateTotal(){
 
     //subtotal
     const subTotal = firstClassTicket * 150 + ecomomyClassTicket * 100;
-
     document.getElementById('subtotal').innerText = '$'+ subTotal;
+    //tax
     const totalTax = Math.round(subTotal * 0.10);
     document.getElementById('tax').innerText = '$' + totalTax;
+    //total
     const total = subTotal + totalTax;
     document.getElementById('total').innerText = '$'+ total;
 }
-
+//getting input from user
 function getTicket(ticketType){
     const getTickets = document.getElementById(ticketType+'-count');
     const ticketCount = parseInt(getTickets.value);
     return ticketCount;
 }
+// booking section
+document.getElementById('booking').addEventListener('click', function(){
+    const bookingMessage = document.getElementById('booking-message');
+        bookingMessage.style.display = 'block';
+        bookingMessage.style.color = 'green';
+        bookingMessage.style.textAlign = 'center';
+});
