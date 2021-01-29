@@ -31,11 +31,16 @@ function handleTicket(ticketType, isIncrement){
 
 function calculateTotal(){
     const firstClassTicket = getTicket('firstClass');
+    const ecomomyClassTicket = getTicket('economyClass');
 
     //subtotal
-    const subTotal = firstClassTicket*150;
+    const subTotal = firstClassTicket * 150 + ecomomyClassTicket * 100;
 
     document.getElementById('subtotal').innerText = '$'+ subTotal;
+    const totalTax = Math.round(subTotal * 0.10);
+    document.getElementById('tax').innerText = '$' + totalTax;
+    const total = subTotal + totalTax;
+    document.getElementById('total').innerText = '$'+ total;
 }
 
 function getTicket(ticketType){

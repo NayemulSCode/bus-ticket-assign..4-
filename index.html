@@ -63,15 +63,18 @@
                     </div>
             </div>
             
-            <div class="input-group f-class">
-                <div>
-                    <label for="">Economy ($100)</label>
-                    <input class="inp-style inp-width" type="number" name="">
+            <div class="input-group ">
+                <div class="row f-class">
+                    <div class="col-md-7">
+                        <label for="">Economy ($100)</label>
+                        <input id="economyClass-count" class="inp-style inp-width" type="text"value="0">
+                    </div>
+                    <div class="col-md-4">
+                        <button onclick="handleTicket('economyClass', false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                        <button onclick="handleTicket('economyClass', true)" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                    </div>
                 </div>
-                <div class="plus-minus-btn">
-                    <p> <span>+</span> <span>-</span> </p>
-                </div>
-            </div>
+        </div>
             <div class="calculations">
                 <div class="amount">
                     <div class="left">
@@ -87,7 +90,7 @@
                         <p>Charge 10% VAT</p>
                     </div>
                     <div class="right">
-                        <p>$50</p>
+                        <p><span id="tax">00</span></p>
                     </div>
                 </div>
                 <hr>
@@ -96,7 +99,7 @@
                         <h4>Total</h4>
                     </div>
                     <div class="right">
-                        <p>$550</p>
+                        <p><span id="total">00</span></p>
                     </div>
                 </div>
             </div>
