@@ -49,4 +49,7 @@ document.getElementById('booking').addEventListener('click', function(){
         bookingMessage.style.display = 'block';
         bookingMessage.style.color = 'green';
         bookingMessage.style.textAlign = 'center';
+
+    const bookingId = document.getElementById('bookingId');
+    bookingId.innerHTML = Math.floor((Math.random() * 1000) + 1);
 });
