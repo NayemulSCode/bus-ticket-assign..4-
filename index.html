@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap"
         rel="stylesheet">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -48,14 +50,17 @@
                     <input class="inp-style" type="date" name="">
                 </div>
             </div>
-            <div class="input-group f-class">
-                <div>
-                    <label for="">First Class ($150)</label>
-                    <input class="inp-style inp-width" type="number" name="">
-                </div>
-                <div class="plus-minus-btn">
-                    <p>+ -</p>
-                </div>
+            <div class="input-group ">
+                    <div class="row f-class">
+                        <div class="col-md-7">
+                            <label for="">First Class ($150)</label>
+                            <input id="firstClass-count" class="inp-style inp-width" type="text"value="0">
+                        </div>
+                        <div class="col-md-4">
+                            <button onclick="handleTicket('firstClass', false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                            <button onclick="handleTicket('firstClass', true)" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
             </div>
             
             <div class="input-group f-class">
@@ -73,7 +78,7 @@
                         <p>Subtotal</p>
                     </div>
                     <div class="right">
-                        <p>$500</p>
+                        <p><span id="subtotal">00</span></p>
                     </div>
                 </div>
 
