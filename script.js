@@ -48,7 +48,7 @@ document.getElementById('booking').addEventListener('click', function(){
     const bookingMessage = document.getElementById('booking-message');
         bookingMessage.style.display = 'block';
         bookingMessage.style.color = 'green';
-        bookingMessage.style.textAlign = 'center';
+        // bookingMessage.style.textAlign = 'center';
 
     const bookingId = document.getElementById('bookingId');
     bookingId.innerHTML = Math.floor((Math.random() * 1000) + 1);
